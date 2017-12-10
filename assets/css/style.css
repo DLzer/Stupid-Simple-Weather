@@ -1,0 +1,27 @@
+
+#site-title {
+    text-align:center;
+    margin-top: 2.5rem !important;
+    padding-bottom: 10px;
+}
+.title-row {
+    margin-top: 5rem;
+}
+.title-day {
+    text-align:center;
+    padding-bottom: 10px;
+}
+.icon-day {
+    text-align:center;
+    margin:0 auto;
+    padding-bottom: 5px;
+}
+.icon {
+    text-align:center;
+    padding-bottom: 5px;
+}
+.forecast {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.75rem;
+}
