@@ -1,10 +1,21 @@
 $(document).ready(function(){
     
     $('.noLocation').hide();
-
-    if(tryGeoLocation()) {
-        tryGeoLocation();
-    } 
+    
+    // If HTML5 GeoLocate is available use it for LatLong, then reverse geoCode with getZip().
+    // If HTML5 GeoLocate is not available, use Google GeoLocation API for the LatLong.
+    // If neither can access the user location display an error message.
+    if("geolocation" in navigator) {
+        console.log('Geolocation Available');
+        navigator.geolocation.getCurrentPosition(function(position){
+            var latLong = position.coords.latitude+','+position.coords.longitude;
+            getZip(latLong);
+        });
+    } else if(tryGeoLocation()) {
+        tryGeoLocation()
+    } else {
+        $('.noLocation').show();
+    }
 
     $('#zip-submit').on('click', function(e){
         e.preventDefault();
