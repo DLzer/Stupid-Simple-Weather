@@ -142,7 +142,7 @@ weatherCall = (zipCode) => {
 tryGeoLocation = () => {
     $.ajax({
         type: 'POST',
-        url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCMxoo103kh48YCL8VFbCc5aY5-Zn9C_xk',
+        url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY',
         data: {},
         success: function(data){
             var latLong = data.location.lat + ',' + data.location.lng;
@@ -153,7 +153,7 @@ tryGeoLocation = () => {
 }
 
 getZip = (latLong) => {
-    var apiKey = 'AIzaSyAenX_pNSjYZkuxCAmOZS6tzn9jc15M8bk';
+    var apiKey = 'YOUR_API_KEY';
     $.ajax({
         type: 'POST',
         url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+latLong+'&key='+apiKey+'',
