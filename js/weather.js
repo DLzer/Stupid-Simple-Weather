@@ -52,6 +52,7 @@ function manualSearch() {
 
 // Google Geolocate API using es6 promises
 function geoLocate() {
+
     fetch(GEOURL, {method:'post'})
         .then(response => response.json())
         .then(data => {
