@@ -1,61 +1,53 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Simple Weather</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
-        <script src="https://use.fontawesome.com/a839cd93dd.js"></script>
+        <title>SSWeather</title>
     </head>
-    <body>
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><i class="fal fa-cloud"></i></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    
-    <div class="wrapper">
-        <div class="container-fluid">
-            <!-- Navigation -->
-            <div class="row">
-                <div class="col-md-12 navigation-col">
-                    <nav class="navbar navbar-light justify-content-between">
-                        <a class="navbar-brand" href="index.html">Stupid Simple Weather <i class="fa fa-cloud" aria-hidden="true"></i></a>
-                        <a class="nav-item nav-link" href="about.html">About</a>
-                        <a class="nav-item nav-link"><span class="date"></span></a>
-                        <a class="nav-item nav-link"><span class="clock"></span></a>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" id="zip-search" type="search" placeholder="ex. 10940" aria-label="Search">
-                            <button id="zip-submit" class="btn btn-outline-info my-2 my-sm-0" name="zip-submit" type="submit">Search</button>
-                        </form>
-                    </nav>  
-                </div>
-                <div class="noLocation"><span id="noLocation-text">Location Not Enabled. Please enter your zip code manually.</span></div>
-            </div>
-            <!-- Heading/Warning -->
-            <div class="row justify-content-md-center">
-                <div class="col-md-6">
-                    <div class="warning">
-                    </div>
-                    <div class="welcome-letter">
-                        <!-- <h3>Welcome to Stupid Simple Weather. Just enter your ZIP to start.</h3> -->
-                    </div>
-                </div>
-            </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li style="padding-right:10px;" class="nav-item date">
+        </li>
+        <li class="nav-item clock">
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="zipForm" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fal fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="location"></h2>
         </div>
-        <!-- Weather -->
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-md-12 weather-title">
-                </div>
-            </div>
-            <div class="row weather-row">
-            </div>
-        </div>
-
-        <div class="push"></div>
     </div>
-    <div class="clear"></div>
+    <div class="row weather-box-container">
+      
+    </div>
+</div>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/js.cookie.js"></script>
+        <script defer src="js/fontawesome-all.js"></script>
+        <script type="text/javascript" src="js/svg.js"></script>
         <script type="text/javascript" src="js/weather.js"></script>
-    </body>
+        <script type="text/javascript" src="js/date.js"></script>
+</body>
 </html>
