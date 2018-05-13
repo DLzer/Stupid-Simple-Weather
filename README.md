@@ -18,4 +18,3 @@ A stupid simple weather app
                                 </ul>
                         </ul>
                         <hr>
-                        <img src="assets/images/wulogo.png" height="45">
